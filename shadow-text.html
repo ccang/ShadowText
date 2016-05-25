@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+    function doOutput() {
+      var inputStr = $('#input').val();
+      var outputStr = "";
+      var coverText = $('input[name=covertext]:checked').val();
+      for (var i = 0; i < inputStr.length; i++) { outputStr = outputStr + inputStr.charAt(i) + decodeURI(coverText); }
+      $('#output').val(outputStr);
+    }
+    $('#input').on('input',function() { doOutput(); });
+    $('input[name=covertext]:radio').change(function() { doOutput(); });
+  });
+</script>
+</head>
+<body>
+    Input a string: <br />  <textarea id='input' rows='6'></textarea><p />
+    <input type='radio' class='cover' name='covertext' value='%D2%88'>式樣一: 式҈樣҈一҈ <br>
+    <input type='radio' class='cover' name='covertext' value='%D2%89'>式樣二: 式҉樣҉二҉ <br>
+    <input type='radio' class='cover' name='covertext' value='%D2%88%D2%89' checked>兩樣都要: 兩҈҉樣҈҉都҈҉要҈҉ <p />
+    Your Output: <br />  <textarea id='output' rows='6'></textarea><p />
+  Covered-text Generator<br />(C) version 1.1, 2016 Angela Ng.<p />
+   <a rel="license" href="http://creativecommons.org/licenses/by/3.0/tw/">
+   <img alt="創用 CC 授權條款" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/tw/88x31.png" /></a>
+   <br />本著作係採用<a rel="license" href="http://creativecommons.org/licenses/by/3.0/tw/">創用 CC 姓名標示 3.0 台灣 授權條款</a>授權.
+</body>
+</html>
