@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 <head>
 <meta charset="utf-8" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -17,11 +17,12 @@
 </script>
 </head>
 <body>
-    Input a string: <br />  <textarea id='input' rows='6'></textarea><p />
-    <input type='radio' class='cover' name='covertext' value='%D2%88'>式樣一: 式҈樣҈一҈ <br>
-    <input type='radio' class='cover' name='covertext' value='%D2%89'>式樣二: 式҉樣҉二҉ <br>
-    <input type='radio' class='cover' name='covertext' value='%D2%88%D2%89' checked>兩樣都要: 兩҈҉樣҈҉都҈҉要҈҉ <p />
-    Your Output: <br />  <textarea id='output' rows='6'></textarea><p />
+    Input a string: <br />  <textarea id='input' rows='4' cols='40'></textarea><p />
+    <input type='radio' class='cover' name='covertext' value='%D2%88' checked>馬賽克,式樣一: 式҈樣҈一҈ <br />
+    <input type='radio' class='cover' name='covertext' value='%D2%89'>馬賽克,式樣二: 式҉樣҉二҉ <br />
+    <input type='radio' class='cover' name='covertext' value='%D2%88%D2%89'>馬賽克,兩樣都要: 兩҈҉樣҈҉都҈҉要҈҉ <br />
+    <input type='radio' class='cover' name='covertext' value='%CC%B6'>刪除線<p />
+    Your Output: <br />  <textarea id='output' rows='4' cols='40'></textarea><p />
   Covered-text Generator<br />(C) version 1.1, 2016 Angela Ng.<p />
    <a rel="license" href="http://creativecommons.org/licenses/by/3.0/tw/">
    <img alt="創用 CC 授權條款" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/tw/88x31.png" /></a>
